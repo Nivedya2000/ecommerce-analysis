@@ -1,5 +1,4 @@
 # Databricks notebook source
-# Databricks notebook source
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import countDistinct, col
 import matplotlib.pyplot as plt
