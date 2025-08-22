@@ -1,28 +1,41 @@
-# Python cache
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
-
-# Databricks notebooks checkpoints
-.ipynb_checkpoints/
-
-# Environment files
-.env
-.venv/
+*.pkl
 *.egg-info/
-*.egg
-
-# Logs
 *.log
 
-# OS files
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# Databricks / Jupyter
+.ipynb_checkpoints/
+.databricks/
+*.dbc
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
 .DS_Store
 Thumbs.db
 
-# Jupyter
-.ipynb_checkpoints/
-*.ipynb
+# Data files
+*.csv
+*.tsv
+*.parquet
+*.delta
+*.db
+*.sqlite
 
-# VS Code
-.vscode/
+# Reports/plots
+*.png
+*.jpg
+*.pdf
+*.svg
