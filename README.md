@@ -1,4 +1,3 @@
-
 # 🛒 E-Commerce Data Analysis with Databricks & PySpark
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
@@ -10,42 +9,39 @@
 ---
 
 ## 📌 Project Overview
+This project demonstrates how to process, analyze, and visualize **e-commerce transaction data** using **Databricks**, **PySpark**, and **SQL**.  
 
-This project demonstrates how to process, analyze, and visualize **e-commerce transaction data** using **Databricks**, **PySpark**, and **SQL**.
-It covers the full pipeline: data preparation, train/test split, exploratory data analysis (EDA), and **advanced analytics (clustering, time-series, anomaly detection)**.
+It covers the full pipeline:
+- Data ingestion & preparation  
+- Train/Test split (customer-level)  
+- Exploratory Data Analysis (EDA)  
+- Advanced analytics (Customer Segmentation, Time-Series Forecasting, Anomaly Detection)  
 
-The dataset is stored in Databricks Delta format, and the analysis includes country-level insights, customer behavior, product trends, revenue breakdowns, and predictive extensions.
+The dataset is stored in **Delta format**. The pipeline extracts insights about **customer behavior, country-level trends, product performance, and sales anomalies**.
 
 ---
 
 ## 🚀 Features
-
-* ✅ **Dynamic catalog detection** – works across Community & Premium Databricks editions
-* ✅ **Data preparation** – clean invoice & item tables from raw data
-* ✅ **Train/Test split** – customer-level splitting to prevent data leakage
-* ✅ **Exploratory Data Analysis (EDA):**
-
-  * Number of countries
-  * Top countries by customers
-  * Top customers by order volume
-  * Most frequently ordered items
-  * Price distribution (+ check for negative prices)
-  * Revenue-generating items (inside vs. outside UK)
-  * Customers who purchased specific products (e.g., *WHITE METAL LANTERN*)
-* ✅ **Advanced Analytics:**
-
-  * Customer Segmentation (RFM + Clustering)
-  * Time-Series Forecasting (Monthly Sales)
-  * Anomaly Detection (Invoice-level revenue outliers)
-* ✅ **Visualizations** using Databricks `display()` and Matplotlib
+- ✅ **Dynamic catalog detection** (works across Community & Premium Databricks editions)  
+- ✅ **Clean data preparation** – build invoice & item tables  
+- ✅ **Train/Test split** at customer-level to avoid leakage  
+- ✅ **Exploratory Data Analysis (EDA)**:
+  - Countries & customers  
+  - Top products & revenue drivers  
+  - Order volume trends  
+  - Refund/negative price checks  
+- ✅ **Advanced Analytics**:
+  - RFM Segmentation + KMeans Clustering  
+  - Monthly Sales Trend Forecasting  
+  - Anomaly Detection in Invoice Revenue  
+- ✅ **Interactive Visualizations** with Databricks `display()` and Matplotlib  
 
 ---
 
 ## 📂 Project Structure
-
 ```
 ecommerce-analysis/
-│── databricks_ecomm_pipeline.py   # Main Databricks pipeline script
+│── ecomm_databricks_pipeline.py   # Main Databricks pipeline script
 │── README.md                      # Project documentation
 │── LICENSE                        # License (MIT)
 │── .gitignore                     # Git ignore rules
@@ -54,60 +50,52 @@ ecommerce-analysis/
 ---
 
 ## 🛠️ Requirements
-
-* **Databricks Runtime** (with Spark 3.x + Delta support)
-* **Python 3.x**
-* **Libraries:**
-
-  * PySpark (pre-installed on Databricks)
-  * Pandas
-  * Matplotlib
+- **Databricks Runtime** (Spark 3.x + Delta support)  
+- **Python 3.x**  
+- Libraries:
+  - PySpark (pre-installed in Databricks)  
+  - Pandas  
+  - Matplotlib  
+  - scikit-learn (for clustering)  
 
 ---
 
 ## ▶️ How to Run
-
-1. Upload `databricks_ecomm_pipeline.py` into your Databricks workspace.
-2. Ensure you have a Delta table named `data_ecomm` in your catalog (`hive_metastore.default` or `workspace.default`).
-3. Run the notebook cells step by step:
-
-   * Load and prepare data
-   * Create invoice and item tables
-   * Verify data
-   * Train/test split
-   * Perform exploratory queries and visualizations
-   * Run advanced analytics (clustering, forecasting, anomaly detection)
-4. Review insights in Databricks dashboards or plots.
+1. Upload `ecomm_databricks_pipeline.py` into your **Databricks workspace**.  
+2. Ensure you have a Delta table named **`data_ecomm`** in your catalog (`hive_metastore.default` or `workspace.default`).  
+3. Run cells in order:  
+   - Load & prepare data  
+   - Create `invoices` & `items` tables  
+   - Verify tables  
+   - Perform EDA & visualizations  
+   - Run advanced analytics (clustering, forecasting, anomaly detection)  
+4. Review insights in Databricks dashboards/plots.  
 
 ---
 
 ## 📊 Key Insights
-
-* The UK contributes the highest number of customers and revenue.
-* Some items (e.g., decorative lanterns) dominate sales volume.
-* Negative prices exist in the dataset (likely returns/refunds).
-* Customer segmentation reveals distinct purchasing clusters.
-* Monthly sales trends show seasonal purchase behavior.
-* Anomalies (unusually high/low invoices) can indicate fraud or data quality issues.
+- 🇬🇧 **UK dominates** in customer count & revenue.  
+- 📦 Certain products (e.g., decorative lanterns) dominate sales.  
+- ⚠️ Negative prices = refunds/returns.  
+- 👥 **Customer segmentation** reveals distinct groups of buyers.  
+- 📈 Monthly sales trends highlight seasonal demand.  
+- 🚨 Outliers in invoices may indicate fraud or data issues.  
 
 ---
 
-## 🔮 Future Work
-
-* Build ML models for **customer churn prediction**.
-* Create **recommendation systems** based on purchase history.
-* Deploy dashboards in **Tableau / Power BI** for stakeholders.
-* Automate pipeline with **scheduled jobs** in Databricks.
+## 🔮 Future Enhancements
+- Customer churn prediction  
+- Product recommendation system  
+- Dashboard integration (Tableau / Power BI)  
+- Pipeline automation with scheduled Databricks jobs  
 
 ---
 
 ## 👩‍💻 Author
-
-Developed by **Nivedya K**
-📧 [Email](nivedyak1112@gmail.com) | 🔗 [LinkedIn](https://linkedin.com/in/nivedya-k) | 🐙 [GitHub](https://github.com/Nivedya2000)
+Developed by **Nivedya K**  
+📧 [Email](mailto:nivedyak1112@gmail.com) | 🔗 [LinkedIn](https://linkedin.com/in/nivedya-k) | 🐙 [GitHub](https://github.com/Nivedya2000)
 
 ---
 
 ## 📜 License
-
 This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
