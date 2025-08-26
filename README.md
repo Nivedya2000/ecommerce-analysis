@@ -41,7 +41,7 @@ The dataset is stored in **Delta format**. The pipeline extracts insights about 
 
 ## 📂 Project Structure
 ```
-ecommerce-analysis/
+ecommerce-bigdata-analysis/
 │── ecomm_databricks_pipeline.py   # Main Databricks pipeline script
 │── README.md                      # Project documentation
 │── LICENSE                        # License (MIT)
